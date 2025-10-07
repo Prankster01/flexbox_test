@@ -1,16 +1,44 @@
+body{
+    background-color: rgb(34, 27, 27);
+}
+
 .con{
-    display:flex;
-    justify-content: center;
+    display: flex;
+    justify-content:center;
     flex-wrap: wrap;
-    gap: 5px
+    gap: 20px;
+    
 }
 
-.con div {
-    background:lightblue;
-    border: 4px solid red;
-    height: 40px
-
+.box{
+    display: flex;
+    width:70px;
+    height:70px;
+    font-size: 40px;
+    background-color: azure;
+    background-image: linear-gradient(to bottom right, azure, lightblue);
+    border: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+
+.box::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, skyblue, rgb(188, 20, 188));
+    z-index: -1;
+}
+
+.box:hover{
+
+    z-index:0;
+    box-shadow: 40px 0 100px skyblue, -40px 0 100px rgb(188, 20, 188);
+}
+
 
 
 
